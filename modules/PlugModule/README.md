@@ -22,3 +22,7 @@ Use VSCode as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial
 
 3. Deploy edge modules to device
 Use VSCode as in [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#deploy-modules-to-device) to deploy the modules to the Percept DK with the above files.
+
+
+### Credits and references
+- [Tutorial: Develop IoT Edge modules with Linux containers](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11)
