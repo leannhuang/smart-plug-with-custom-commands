@@ -10,7 +10,9 @@ The goal of this project is to be able to vocie control the smart appliance with
 - An Azure Container Registry repository or create it by following [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)
 - Docker for image building
 - A Custom Commands app (create custom commands [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices))
-- TPLink Smart Plug ([Purchase](https://www.kasasmart.com/us/products/smart-plugs/kasa-smart-wifi-plug-hs100)), get the smart plug LAN ip
+- TPLink Smart Plug ([Purchase](https://www.kasasmart.com/us/products/smart-plugs/kasa-smart-wifi-plug-hs100))
+- Download the TP-LINK Kasa app [Download on the App Store](https://apps.apple.com/us/app/kasa-smart/id1034035493)/ [Get it on Google Play](https://play.google.com/store/apps/details?id=com.tplink.kasa_android&hl=en_US&gl=US)
+
 
 ## Device setup
 1. Follow [Quickstart: unbox and assemble your Azure Percept DK components](https://docs.microsoft.com/en-us/azure/azure-percept/quickstart-percept-dk-unboxing) and the next steps.
@@ -27,7 +29,7 @@ The goal of this project is to be able to vocie control the smart appliance with
 
 ## Steps
 1. Visit the [custom commands folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/custom-commands) to complete setting up the custom commands of the smart plug (Note down the `Application ID` and `Speech resource key`)
-2. Get smart plug LAN ip and note it down
+2. Configure Smart Plug preferences on the Kasa app to get smart plug LAN ip and note it down
 3. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
 4. Visit the [PlugModule folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/modules/PlugModule) to deploy edge modules on your edge device
 
