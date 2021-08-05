@@ -7,24 +7,34 @@ The goal of this project is to be able to vocie control the smart appliance with
 - Percept DK ([Purchase](https://www.microsoft.com/en-us/store/build/azure-percept/8v2qxmzbz9vc))
 - Azure Subscription : [Free trial account](https://azure.microsoft.com/en-us/free/)
 - An Azure subscription key for Speech service: [Get one for free](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/overview.md#try-the-speech-service-for-free) or create it on the [Azure portal](https://portal.azure.com/)
-- A Custom Commands app (see [Create a voice assistant using Custom Commands](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/quickstart-custom-commands-application.md) )
-- Python 3.6+ (preferably an [Anaconda](https://docs.anaconda.com/anaconda/index.html) release)
-
+- An Azure Container Registry repository or create it by following [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)
+- Docker for image building
+- A Custom Commands app (create custom commands [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices))
+- TPLink Smart Plug ([Purchase](https://www.kasasmart.com/us/products/smart-plugs/kasa-smart-wifi-plug-hs100)), get the smart plug LAN ip
 
 ## Device setup
 1. Follow [Quickstart: unbox and assemble your Azure Percept DK components](https://docs.microsoft.com/en-us/azure/azure-percept/quickstart-percept-dk-unboxing) and the next steps.
 
 
-### Python setup
+## Content
 
-1. If using Anaconda Python (recommended) [setup a conda environment](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html), otherwise, [use `venv`](https://docs.python.org/3/library/venv.html) to create a nuclear environment for this solution.
-2. Install the Python dependencies as follows.
+| File             | Description                                                   |
+|-------------------------|---------------------------------------------------------------|
+| `readme.md`             | This readme file                                              |
+| `deployment.template.json`    | The delopyment the edge modules of this Smart Plug Solution |
+| `envtemplate`    | The list of the enviroment varialbes for .env use |
 
-```
-pip install -r requirements.txt
-```
 
-## Credits and references
+## Steps
+1. Visit the [custom commands folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/custom-commands) to complete setting up the custom commands of the smart plug (Note down the `Application ID` and `Speech resource key`)
+2. Get smart plug LAN ip and note it down
+3. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
+4. Visit the [PlugModule folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/modules/PlugModule) to deploy edge modules on your edge device
+
+
+### Credits and references
 - [TPLink Smart Home api](https://github.com/plasticrake/tplink-smarthome-api)
 - [Azure Percept documentation](https://docs.microsoft.com/en-us/azure/azure-percept/)
 - [Develop Custom Commands applications](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-develop-custom-commands-application)
+- [Object Counting on the Percept DK with Azure Video Analyzer](https://github.com/michhar/counting-objects-with-azure-video-analyzer)
+- [Create a voice assistant using Custom Commands](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/quickstart-custom-commands-application.md)

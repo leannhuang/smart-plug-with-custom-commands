@@ -1,0 +1,163 @@
+{
+  "en-us": {
+    "entityResolver": {
+      "type": "nop",
+      "isGenerated": false
+    },
+    "minIntentConfidence": 0.4,
+    "highIntentConfidence": 0.8,
+    "lgTemplates": [
+      "# FallbackResponse",
+      "- Add your fallback message here",
+      "# OnOff-OnOff",
+      "- On or Off?",
+      "# OnOff-SubjectDevice",
+      "- Which device do you want to control?",
+      "# OnOff-4ccaa120e8d811eb8cff0591486ae3c5",
+      "- Sure, turning the {SubjectDevice} {OnOff}"
+    ],
+    "lgTemplatesMap": {
+      "# FallbackResponse": [
+        "- Add your fallback message here"
+      ],
+      "# OnOff-OnOff": [
+        "- On or Off?"
+      ],
+      "# OnOff-SubjectDevice": [
+        "- Which device do you want to control?"
+      ],
+      "# OnOff-4ccaa120e8d811eb8cff0591486ae3c5": [
+        "- Sure, turning the {SubjectDevice} {OnOff}"
+      ]
+    },
+    "type": "BaseLanguage",
+    "recognizer": {
+      "application": "",
+      "isStaging": false,
+      "versionId": "0.1",
+      "type": "luis"
+    },
+    "speechOutput": {
+      "font": "Microsoft Server Speech Text to Speech Voice (en-US, AnaNeural)",
+      "locale": "en-US"
+    },
+    "webEndpoints": [],
+    "globalParameters": [],
+    "commands": [
+      {
+        "name": "FallbackCommand",
+        "completionStrategy": "OnRequiredParameters",
+        "parameters": [],
+        "rules": [],
+        "completionRules": [
+          {
+            "name": "DefaultResponse",
+            "conditions": [
+              {
+                "type": "True"
+              }
+            ],
+            "actions": [
+              {
+                "type": "SpeechResponse",
+                "response": {
+                  "type": "Template",
+                  "templateName": "# FallbackResponse"
+                }
+              }
+            ],
+            "postExecutionState": "None"
+          }
+        ],
+        "triggeringExamples": [
+          "> - You can start sentences with '>' to add comments.",
+          "> - You can also use parameters by adding the name of the parameter within curly braces, i.e.",
+          "> Set an alarm to {YourDateParameterName}",
+          "> Where YourDateParameterName is the name of a parameter defined in the 'Parameters' section.",
+          "Help",
+          "Help me",
+          "What can you do?",
+          "How can I start?",
+          "Hello",
+          "Hi"
+        ],
+        "multiTurnExamples": []
+      },
+      {
+        "name": "OnOff",
+        "completionStrategy": "OnRequiredParameters",
+        "parameters": [
+          {
+            "name": "OnOff",
+            "type": {
+              "name": "String",
+              "configuration": {
+                "type": "StringList",
+                "values": {
+                  "On": [],
+                  "Off": []
+                }
+              }
+            },
+            "elicitResponse": {
+              "type": "Template",
+              "templateName": "# OnOff-OnOff"
+            }
+          },
+          {
+            "name": "SubjectDevice",
+            "type": {
+              "name": "String",
+              "configuration": {
+                "type": "StringList",
+                "values": {
+                  "light": []
+                }
+              }
+            },
+            "elicitResponse": {
+              "type": "Template",
+              "templateName": "# OnOff-SubjectDevice"
+            }
+          }
+        ],
+        "rules": [],
+        "completionRules": [
+          {
+            "name": "ConfirmationResponse",
+            "conditions": [
+              {
+                "type": "True"
+              },
+              {
+                "type": "RequiredParameters",
+                "names": [
+                  "OnOff",
+                  "SubjectDevice"
+                ]
+              }
+            ],
+            "actions": [
+              {
+                "type": "SpeechResponse",
+                "response": {
+                  "type": "Template",
+                  "templateName": "# OnOff-4ccaa120e8d811eb8cff0591486ae3c5"
+                }
+              }
+            ],
+            "nextTurnExpectations": [],
+            "postExecutionState": "CompleteCommand"
+          }
+        ],
+        "triggeringExamples": [
+          "turn {OnOff} the {SubjectDevice}",
+          "{SubjectDevice} {OnOff}",
+          "turn it {OnOff}",
+          "turn something {OnOff}",
+          "turn something"
+        ]
+      }
+    ]
+  }
+}
