@@ -1,8 +1,9 @@
 # Rename to .env before creating deployment manifest from the template
 CONTAINER_REGISTRY_USERNAME=<Your container registry user name>
 CONTAINER_REGISTRY_PASSWORD=<Your container registry password>
-CONTAINER_REGISTRY_ADDRESS=<Your container registry address>
+CONTAINER_REGISTRY_LOGINSERVER=<Your container registry address>
 
-SPEECH_appId=<Your speech App Id>
-SPEECH_key=<Your speech key>
+SPEECH_APPID=<Your speech App Id>
+SPEECH_KEY=<Your speech key>
+SPEECH_REGION=<Your speech service region>
 PLUG_IP=<Your smart plug local ip address>

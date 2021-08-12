@@ -13,7 +13,7 @@
               "dkear": {
                 "username": "$CONTAINER_REGISTRY_USERNAME",
                 "password": "$CONTAINER_REGISTRY_PASSWORD",
-                "address": "$CONTAINER_REGISTRY_ADDRESS"
+                "address": "$CONTAINER_REGISTRY_LOGINSERVER"
               }
             }
           }
@@ -229,7 +229,7 @@
           "speechConfigs": {
               "appId": "$SPEECH_APPID",
               "key": "$SPEECH_KEY",
-              "region": "westus",
+              "region": "$SPEECH_REGION",
               "keywordModelUrl": "https://aedspeechscenarios.blob.core.windows.net/keyword-tables/computer.table",
               "keyword": "computer",
               "skillType": "xxx",

@@ -49,11 +49,11 @@ async def main():
                     resp = dict_data["botResponse"]
                     print(f'resp: {resp}')
 
-                    if resp == 'Sure, turning the lights On':
+                    if resp == 'Sure, turning the light On':
                         print('On')
                         #asyncio.run(plug.turn_on())
                         await plug.turn_on()
-                    if resp == 'Sure, turning the lights Off':
+                    if resp == 'Sure, turning the light Off':
                         print('Off')
                         #asyncio.run(plug.turn_off())
                         await plug.turn_off()
