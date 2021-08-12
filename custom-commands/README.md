@@ -18,7 +18,7 @@ Turn on the light
 Turn off the light
 ```
 
-## Deploy and note down the `Application ID` and `Speech resource key` value
+## Deploy and note down the `Application ID`, `Speech resource key`, and `Region` value
 
 1. Follow the guidance [here](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/quickstart-custom-commands-application.md#go-to-the-speech-studio-for-custom-commands) to import the `smart-plug.json` file, note down the `region` of the resource you created above for further use
 

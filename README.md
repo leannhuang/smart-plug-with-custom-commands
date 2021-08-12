@@ -28,7 +28,7 @@ The goal of this project is to be able to vocie control the smart appliance with
 
 
 ## Steps
-1. Visit the [custom commands folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/custom-commands) to complete setting up the custom commands of the smart plug (Note down the `Application ID` and `Speech resource key`)
+1. Visit the [custom commands folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/custom-commands) to complete setting up the custom commands of the smart plug (Note down the `Application ID`, `Speech resource key`, and `region`)
 2. Configure Smart Plug preferences on the Kasa app to get smart plug LAN ip and note it down
 3. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
 4. Visit the [PlugModule folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/modules/PlugModule) to deploy edge modules on your edge device
