@@ -129,9 +129,6 @@
         }
       }
     },
-    "WebStreamModule": {
-        "properties.desired": {}
-    },
     "azureeyemodule": {
       "properties.desired": {
         "Logging": true,
