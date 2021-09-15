@@ -14,6 +14,16 @@ The goal of this project is to be able to vocie control the smart appliance with
 - Download the TP-LINK Kasa app [Download on the App Store](https://apps.apple.com/us/app/kasa-smart/id1034035493)/ [Get it on Google Play](https://play.google.com/store/apps/details?id=com.tplink.kasa_android&hl=en_US&gl=US)
 
 
+## How does voice assistance work?
+![Voice Assistant](docs/images/how-does-voice-assistant-work.png)
+
+## Core components of the Azure Percept Audio
+![Core components](docs/images/core-components.png)
+
+## Solution Architecture
+![Solution Arch](docs/images/sw-arch.png)
+
+
 ## Device setup
 1. Follow [Quickstart: unbox and assemble your Azure Percept DK components](https://docs.microsoft.com/en-us/azure/azure-percept/quickstart-percept-dk-unboxing) and the next steps.
 
@@ -40,3 +50,4 @@ The goal of this project is to be able to vocie control the smart appliance with
 - [Develop Custom Commands applications](https://docs.microsoft.com/en-us/azure/cognitive-services/speech-service/how-to-develop-custom-commands-application)
 - [Object Counting on the Percept DK with Azure Video Analyzer](https://github.com/michhar/counting-objects-with-azure-video-analyzer)
 - [Create a voice assistant using Custom Commands](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/quickstart-custom-commands-application.md)
+- [Azure Percept Youtube channel](https://www.youtube.com/channel/UCa8_TsUuotIMuzkLzGNQPIg/featured)
