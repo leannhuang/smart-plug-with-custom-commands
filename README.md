@@ -6,7 +6,6 @@ The goal of this project is to be able to vocie control the smart appliance with
 ## Prerequisites
 - Percept DK ([Purchase](https://www.microsoft.com/en-us/store/build/azure-percept/8v2qxmzbz9vc))
 - Azure Subscription : [Free trial account](https://azure.microsoft.com/en-us/free/)
-- An Azure subscription key for Speech service: [Get one for free](https://github.com/MicrosoftDocs/azure-docs/blob/master/articles/cognitive-services/Speech-Service/overview.md#try-the-speech-service-for-free) or create it on the [Azure portal](https://portal.azure.com/)
 - An Azure Container Registry repository or create it by following [here](https://docs.microsoft.com/en-us/azure/iot-edge/tutorial-develop-for-linux?view=iotedge-2020-11#create-a-container-registry)
 - Docker for image building
 - A Custom Commands app (create custom commands [here](https://ms.portal.azure.com/#create/Microsoft.CognitiveServicesSpeechServices))
@@ -39,9 +38,10 @@ The goal of this project is to be able to vocie control the smart appliance with
 
 ## Steps
 1. Visit the [custom commands folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/custom-commands) to complete setting up the custom commands of the smart plug (Note down the `Application ID`, `Speech resource key`, and `region`)
-2. Configure Smart Plug preferences on the Kasa app to get smart plug LAN ip and note it down
-3. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
-4. Visit the [PlugModule folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/modules/PlugModule) to deploy edge modules on your edge device
+2. Configure Smart Plug preferences on the Kasa app 
+3. Get smart plug LAN ip from your router admin portal and note it down
+4. Create a file named `.env` in this folder based on `envtemplate`. Provide values for all variables.
+5. Visit the [PlugModule folder](https://github.com/leannhuang/smart-plug-with-custom-commands/tree/main/modules/PlugModule) to deploy edge modules on your edge device
 
 
 ### Credits and references
